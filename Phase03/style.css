@@ -115,6 +115,7 @@ Classes
   display: flex;
   padding: 1rem;
   justify-content: space-between;
+  width: 100%;
 }
 
 @media (min-width: 40rem) {
