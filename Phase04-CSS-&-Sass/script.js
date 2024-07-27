@@ -1,4 +1,4 @@
-const URL = 'http://127.0.0.1:5500/Phase02/books.json';
+const URL = 'http://127.0.0.1:5500/Phase04-CSS-&-Sass/assets/books.json';
 const article = document.getElementsByTagName('article')[0];
 
 async function fetchBooks(url) {
