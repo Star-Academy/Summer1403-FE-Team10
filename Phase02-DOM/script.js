@@ -1,6 +1,6 @@
 // const URL =
 // 'https://raw.githubusercontent.com/Star-Academy/codestar-documents/master/static/datasets/books.json';
-const URL = 'http://127.0.0.1:5500/Phase02/books.json';
+const URL = 'http://127.0.0.1:5500/Phase02-DOM/books.json';
 const article = document.getElementsByTagName('article')[0];
 
 async function fetchBooks(url) {
