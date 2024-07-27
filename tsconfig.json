@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2015", "DOM"],
+    "outDir": "./Phase05-TypeScript",
+    "module": "es2020",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["./Phase05-TypeScript/typescript/*.ts"],
+  "exclude": []
+}
