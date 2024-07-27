@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["ES2015", "DOM"],
+    "outDir": "./Phase05-TypeScript",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true
+  },
+  "include": ["./Phase05-TypeScript/typescript/*.ts"],
+  "exclude": []
+}
