@@ -3,6 +3,7 @@ export const URL: string =
 const article: HTMLElement = document.getElementsByTagName('article')[0];
 
 interface Book {
+  id: number;
   name: string;
   image: string;
   genre: string[];

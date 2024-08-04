@@ -1,3 +1,3 @@
 <ul class="cards">
-  <app-card *ngFor="let book of books" [book]="book" class="cards__item"></app-card>
+  <app-card *ngFor="let book of books" [book]="book" class="cards__item" (update)="updateBook($event)" (delete)="deleteBook($event)"></app-card>
 </ul>
