@@ -1,9 +1,10 @@
 import { Component, Input } from "@angular/core";
+import { RandomNumberPipe } from "../../pipes/random-number.pipe";
 
 @Component({
   selector: "app-card",
   standalone: true,
-  imports: [],
+  imports: [RandomNumberPipe],
   templateUrl: "./card.component.html",
   styleUrl: "./card.component.scss",
 })

@@ -1,8 +1,8 @@
 <div class="card">
     <a href="/" class="card__hero-image-container"
       ><img
-        src="https://picsum.photos/200/300"
-        alt="Dune"
+      [src]="'https://picsum.photos/id/' + (0 | randomNumber: 100) + '/200/300'"
+        [alt]="book.name"
         class="card__hero-image"
     /></a>
     <main class="card__content">
