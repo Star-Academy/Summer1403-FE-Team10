@@ -1,1 +1,56 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+:root {
+  /* Primary */
+  --var-soft-blue: hsl(215, 51%, 70%);
+  --var-cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --var-main-darkest: hsl(217, 54%, 11%);
+  --var-card-dark: hsl(216, 50%, 16%);
+  --var-line-dark: hsl(215, 32%, 27%);
+  --var-lightest: white;
+
+  /* Fonts */
+  --var-heading: normal normal 600 1.5em/1.6em "Outfit", sans-serif;
+  --var-small-heading: normal normal 400 1em/1em "Outfit", sans-serif;
+  --var-para: normal normal 300 1em/1.55em "Outfit", sans-serif;
+
+  --default-font-size: 15px;
+}
+
+:root {
+  font-size: var(--default-font-size);
+}
+
+h1 {
+  font: var(--var-heading);
+  color: var(--var-lightest);
+}
+
+h2 {
+  font: var(--var-small-heading);
+  color: var(--var-lightest);
+}
+
+p {
+  font: var(--var-para);
+  color: var(--var-soft-blue);
+}
+
+span {
+  color: white;
+}
