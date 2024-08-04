@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+@import "../src/styles/mixins.scss";
+
 html {
   box-sizing: border-box;
 }
@@ -53,4 +56,9 @@ p {
 
 span {
   color: white;
+}
+
+body {
+  background-color: var(--var-main-darkest);
+  @include responsive-font(18px);
 }
