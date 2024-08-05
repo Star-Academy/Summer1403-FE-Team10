@@ -1,12 +1,18 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { ButtonModule } from "primeng/button";
+import { DialogModule } from "primeng/dialog";
+import { InputTextModule } from "primeng/inputtext";
 
 @Component({
-  selector: 'app-dialog',
+  selector: "app-dialog",
   standalone: true,
-  imports: [],
-  templateUrl: './dialog.component.html',
-  styleUrl: './dialog.component.scss'
+  imports: [DialogModule, ButtonModule, InputTextModule],
+  templateUrl: "./dialog.component.html",
 })
 export class DialogComponent {
+  visible: boolean = false;
 
+  showDialog() {
+    this.visible = true;
+  }
 }

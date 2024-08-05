@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { RandomNumberPipe } from "../../pipes/random-number.pipe";
+import { DialogComponent } from "../dialog/dialog.component";
 
 @Component({
   selector: "app-card",
   standalone: true,
-  imports: [RandomNumberPipe],
+  imports: [RandomNumberPipe, DialogComponent],
   templateUrl: "./card.component.html",
   styleUrl: "./card.component.scss",
 })
