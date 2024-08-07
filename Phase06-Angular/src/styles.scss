@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
-@import "../src/styles/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import '../src/styles/mixins.scss';
 
 html {
   box-sizing: border-box;
@@ -28,9 +28,9 @@ a {
   --var-lightest: white;
 
   /* Fonts */
-  --var-heading: normal normal 600 1.5em/1.6em "Outfit", sans-serif;
-  --var-small-heading: normal normal 400 1em/1em "Outfit", sans-serif;
-  --var-para: normal normal 300 1em/1.55em "Outfit", sans-serif;
+  --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
+  --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+  --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
 
   --default-font-size: 15px;
 }

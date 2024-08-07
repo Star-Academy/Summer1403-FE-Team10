@@ -1,7 +1,7 @@
-import { Pipe, PipeTransform } from "@angular/core";
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: "randomNumber",
+  name: 'randomNumber',
   standalone: true,
 })
 export class RandomNumberPipe implements PipeTransform {

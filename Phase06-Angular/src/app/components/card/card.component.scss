@@ -1,4 +1,4 @@
-@import "../../../styles/mixins.scss";
+@import '../../../styles/mixins.scss';
 
 .card {
   @include flex-column;
@@ -111,8 +111,8 @@
     display: block;
 
     &::after {
-      content: "";
-      background-image: url("https://i.postimg.cc/9MtT4GZY/view.png");
+      content: '';
+      background-image: url('https://i.postimg.cc/9MtT4GZY/view.png');
       background-position: center;
       background-repeat: no-repeat;
       background-size: 5rem;

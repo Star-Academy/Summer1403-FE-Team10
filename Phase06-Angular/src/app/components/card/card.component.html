@@ -1,43 +1,40 @@
 <div class="card">
-    <a href="/" class="card__hero-image-container"
-      ><img
+  <a href="/" class="card__hero-image-container"
+    ><img
       [src]="'https://picsum.photos/id/' + (0 | randomNumber: 100) + '/200/300'"
-        [alt]="book.name"
-        class="card__hero-image"
-    /></a>
-    <main class="card__content">
-      <h1 class="card__title">{{ book.name }}</h1>
-      <div class="card__body">
-        <p class="card__genre">Genre: {{ book.genre.join(', ') }}</p>
-        <div class="card__details">
-          <div class="card__price">
-            <img src="/assets/money.png" alt="Money" class="card__price-icon" />
-            <h2 class="card__price-value">{{ book.price }}</h2>
-          </div>
-          <div class="card__published">
-            <img
-              src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png"
-              alt="clock"
-              class="card__published-icon"
-            />
-            <p class="card__published-date">{{ book.publishData }}</p>
-          </div>
+      [alt]="book.name"
+      class="card__hero-image"
+  /></a>
+  <main class="card__content">
+    <h1 class="card__title">{{ book.name }}</h1>
+    <div class="card__body">
+      <p class="card__genre">Genre: {{ book.genre.join(', ') }}</p>
+      <div class="card__details">
+        <div class="card__price">
+          <img src="/assets/money.png" alt="Money" class="card__price-icon" />
+          <h2 class="card__price-value">{{ book.price }}</h2>
         </div>
-        <div class="card__attribute">
+        <div class="card__published">
           <img
-            src="https://i.postimg.cc/SQBzNQf1/image-avatar.png"
-            alt="avatar"
-            class="card__avatar"
-          />
-          <p class="card__author">
-            Author: <span class="card__author-name">{{ book.author }}</span>
-          </p>
+            src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png"
+            alt="clock"
+            class="card__published-icon" />
+          <p class="card__published-date">{{ book.publishData }}</p>
         </div>
       </div>
-      <div class="card__buttons">
-        <button class="card__buttons--update" (click)="onUpdate()">Update</button>
-        <button class="card__buttons--delete" (click)="onDelete()">Delete</button>
+      <div class="card__attribute">
+        <img
+          src="https://i.postimg.cc/SQBzNQf1/image-avatar.png"
+          alt="avatar"
+          class="card__avatar" />
+        <p class="card__author">
+          Author: <span class="card__author-name">{{ book.author }}</span>
+        </p>
       </div>
-    </main>
+    </div>
+    <div class="card__buttons">
+      <button class="card__buttons--update" (click)="onUpdate()">Update</button>
+      <button class="card__buttons--delete" (click)="onDelete()">Delete</button>
+    </div>
+  </main>
 </div>
-

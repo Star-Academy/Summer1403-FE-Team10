@@ -1,12 +1,12 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { RandomNumberPipe } from "../../pipes/random-number.pipe";
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { RandomNumberPipe } from '../../pipes/random-number.pipe';
 
 @Component({
-  selector: "app-card",
+  selector: 'app-card',
   standalone: true,
   imports: [RandomNumberPipe],
-  templateUrl: "./card.component.html",
-  styleUrl: "./card.component.scss",
+  templateUrl: './card.component.html',
+  styleUrl: './card.component.scss',
 })
 export class CardComponent {
   @Input() book!: Book;
