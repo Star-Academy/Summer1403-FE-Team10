@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { CardComponent } from '../card/card.component';
 import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-book-list',
   standalone: true,
-  imports: [CommonModule, CardComponent],
+  imports: [CardComponent],
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.scss',
 })
