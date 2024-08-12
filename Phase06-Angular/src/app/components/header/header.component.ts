@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { ShadowBoxDirective } from '../../directives/shadow-box.directive';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [ShadowBoxDirective],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
 })

@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RandomNumberPipe } from '../../pipes/random-number.pipe';
 import { DatePipe } from '@angular/common';
+import { ShadowBoxDirective } from '../../directives/shadow-box.directive';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [RandomNumberPipe, DatePipe],
+  imports: [RandomNumberPipe, DatePipe, ShadowBoxDirective],
   templateUrl: './card.component.html',
   styleUrl: './card.component.scss',
 })
