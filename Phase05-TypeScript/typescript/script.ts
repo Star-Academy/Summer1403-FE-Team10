@@ -1,16 +1,7 @@
+import { type Book } from '../../Phase06-Angular/src/app/models/book';
 export const URL: string =
   'http://127.0.0.1:5500/Phase05-TypeScript/assets/books.json';
 const article: HTMLElement = document.getElementsByTagName('article')[0];
-
-interface Book {
-  id: number;
-  name: string;
-  image: string;
-  genre: string[];
-  author: string;
-  publishData: string;
-  price: number;
-}
 
 export async function fetchBooks(url: string): Promise<Book[]> {
   const response = await fetch(url);

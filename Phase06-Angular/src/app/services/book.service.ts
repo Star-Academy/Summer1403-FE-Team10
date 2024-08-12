@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { type Book } from '../models/book';
 
 @Injectable({
   providedIn: 'root',
@@ -25,14 +26,4 @@ export class BookService {
   deleteBook(id: number): Observable<void> {
     return this.http.delete<void>(`${this.booksUrl}/${id}`);
   }
-}
-
-interface Book {
-  id: number;
-  name: string;
-  image: string;
-  genre: string[];
-  author: string;
-  publishData: string;
-  price: number;
 }

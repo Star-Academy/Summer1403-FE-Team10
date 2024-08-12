@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RandomNumberPipe } from '../../pipes/random-number.pipe';
 import { DatePipe } from '@angular/common';
 import { ShadowBoxDirective } from '../../directives/shadow-box.directive';
+import { type Book } from '../../models/book';
 
 @Component({
   selector: 'app-card',
@@ -22,14 +23,4 @@ export class CardComponent {
   onDelete() {
     this.delete.emit(this.book.id);
   }
-}
-
-interface Book {
-  id: number;
-  name: string;
-  image: string;
-  genre: string[];
-  author: string;
-  publishData: string;
-  price: number;
 }

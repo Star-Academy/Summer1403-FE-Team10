@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { BookService } from '../../services/book.service';
+import { type Book } from '../../models/book';
 
 @Component({
   selector: 'app-book-list',
@@ -66,14 +67,4 @@ export class BookListComponent implements OnInit {
       price: 0,
     };
   }
-}
-
-interface Book {
-  id: number;
-  name: string;
-  image: string;
-  genre: string[];
-  author: string;
-  publishData: string;
-  price: number;
 }
