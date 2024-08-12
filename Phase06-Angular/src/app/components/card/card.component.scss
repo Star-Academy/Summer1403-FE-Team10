@@ -21,13 +21,6 @@
     position: absolute;
     bottom: 16px;
     right: 16px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition:
-      transform 0.3s ease,
-      opacity 0.3s ease,
-      visibility 0.3s ease;
 
     &--update,
     &--delete {
@@ -153,9 +146,25 @@
     margin-right: 1.4em;
   }
 
-  &:hover .card__buttons {
+  &:hover .card__buttons--update,
+  &:hover .card__buttons--delete {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+  }
+
+  & .card__buttons--update,
+  & .card__buttons--delete {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  & .card__buttons--update {
+    transition-delay: 80ms;
   }
 }
