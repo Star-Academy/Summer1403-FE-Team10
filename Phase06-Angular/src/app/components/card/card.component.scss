@@ -14,7 +14,7 @@
 
   &:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 30px rgba(13, 255, 0, 0.2);
   }
 
   .card__buttons {
@@ -46,6 +46,15 @@
       -webkit-user-select: none;
       touch-action: manipulation;
 
+      // Animation
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
       &:hover {
         background-position: right center;
         color: #fff;
@@ -55,6 +64,10 @@
       &:active {
         transform: scale(0.9);
       }
+    }
+
+    &--update {
+      transition-delay: 80ms;
     }
 
     button {
@@ -151,20 +164,5 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
-  }
-
-  & .card__buttons--update,
-  & .card__buttons--delete {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition:
-      transform 0.3s ease,
-      opacity 0.3s ease,
-      visibility 0.3s ease;
-  }
-
-  & .card__buttons--update {
-    transition-delay: 80ms;
   }
 }
