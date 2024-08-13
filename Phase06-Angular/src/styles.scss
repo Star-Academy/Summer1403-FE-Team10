@@ -36,6 +36,15 @@ a {
   --default-font-size: 15px;
 }
 
+html[data-theme='light'] {
+  --var-soft-blue: hsl(0, 0%, 98%);
+  --var-cyan: hsl(180, 70%, 40%);
+  --var-main-darkest: hsl(213, 94%, 68%);
+  --var-card-dark: hsl(221, 83%, 53%);
+  --var-line-dark: hsl(0, 0%, 85%);
+  --var-lightest: hsl(0, 0%, 15%);
+}
+
 :root {
   font-size: var(--default-font-size);
 }
@@ -67,4 +76,5 @@ body {
 
 button {
   font: var(--var-para);
+  background-color: inherit;
 }
