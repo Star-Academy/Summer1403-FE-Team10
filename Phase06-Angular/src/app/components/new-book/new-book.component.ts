@@ -12,7 +12,7 @@ import { BookService } from '../../services/book.service';
 })
 export class NewBookComponent {
   newBook: Book = {
-    id: 500,
+    id: 0,
     name: '',
     image: 'https://picsum.photos/200/300',
     genre: [],
