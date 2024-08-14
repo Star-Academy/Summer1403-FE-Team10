@@ -1,0 +1,177 @@
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 998;
+}
+
+dialog {
+  position: fixed;
+  width: 90%;
+  max-width: 30rem;
+  background-color: var(--var-soft-blue);
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: var(--var-card-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  box-sizing: border-box;
+  padding: 32px 24px;
+  z-index: 1000;
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.form-container {
+  width: 350px;
+  background-color: var(--var-card-dark);
+
+  button:active {
+    scale: 0.95;
+  }
+
+  .logo-container {
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  .social-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: var(--var-card-dark);
+    border: none;
+    padding: 12px 16px;
+    gap: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow:
+      0px 0px 3px rgba(0, 0, 0, 0.084),
+      0px 2px 3px rgba(0, 0, 0, 0.168);
+
+    svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--var-main-darkest);
+    }
+
+    &.facebook {
+      background-color: var(--var-main-darkest);
+    }
+
+    &.apple {
+      background-color: var(--var-line-dark);
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type='text'],
+    input[type='password'] {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 6px;
+      border: 1px solid var(--var-cyan);
+
+      &::placeholder {
+        opacity: 0.5;
+      }
+
+      &:focus {
+        outline: none;
+        border-color: var(--var-main-darkest);
+      }
+    }
+  }
+
+  .form-submit-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--var-soft-blue);
+    background-color: var(--var-line-dark);
+    border: none;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: inherit;
+    gap: 8px;
+    margin: 12px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow:
+      0px 0px 3px rgba(0, 0, 0, 0.084),
+      0px 2px 3px rgba(0, 0, 0, 0.168);
+
+    &:hover {
+      background-color: #313131;
+    }
+  }
+
+  .link {
+    color: var(--var-main-darkest);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .forgot-password-link {
+    align-self: flex-end;
+    margin-top: -20px;
+  }
+
+  .signup-link {
+    align-self: center;
+    font-weight: 500;
+
+    .link {
+      font-weight: 400;
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--var-line-dark);
+    opacity: 0.1;
+  }
+}
