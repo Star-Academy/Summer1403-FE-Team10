@@ -1,70 +1,76 @@
-<div class="backdrop"></div>
+<!-- <div class="backdrop"></div> -->
 <dialog open class="form-container">
   <h1 class="heading">Add Book</h1>
 
-  <form class="form">
+  <form class="form" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="name">Book Name</label>
       <input
-        required=""
+        required
         placeholder="Enter the book name"
         name="name"
         id="name"
+        [(ngModel)]="newBook.name"
         type="text"/>
     </div>
 
     <div class="form-group">
       <label for="image">Image URL</label>
       <input
-        required=""
+        required
         placeholder="Enter the image URL"
         name="image"
         id="image"
+        [(ngModel)]="newBook.image"
         type="url"
-        value="https://picsum.photos/200/300" />
+         />
     </div>
 
     <div class="form-group">
       <label for="genre">Genre</label>
       <input
-        required=""
-        placeholder="Enter the genre"
+        required
+        placeholder="Enter the genre (comma separated)"
         name="genre"
         id="genre"
+        [(ngModel)]="genreString"
         type="text"/>
     </div>
 
     <div class="form-group">
       <label for="author">Author</label>
       <input
-        required=""
+        required
         placeholder="Enter the author's name"
         name="author"
         id="author"
+        [(ngModel)]="newBook.author"
         type="text" />
     </div>
 
     <div class="form-group">
       <label for="publishData">Publish Date</label>
       <input
-        required=""
+        required
         placeholder="Enter the publish date"
         name="publishData"
         id="publishData"
+        [(ngModel)]="newBook.publishData"
         type="date" />
     </div>
 
     <div class="form-group">
       <label for="price">Price (in cents)</label>
       <input
-        required=""
+        required
         placeholder="Enter the price in dollars"
         name="price"
         id="price"
+        [(ngModel)]="newBook.price"
         type="number" />
     </div>
     <div class="form-buttons">
-      <button type="cancel" class="form-btn">Cancel</button>
+      <button type="reset" class="form-btn">Cancel</button>
       <button type="submit" class="form-btn">Submit</button>
     </div>
   </form>

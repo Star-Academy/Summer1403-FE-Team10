@@ -29,17 +29,19 @@ export class BookListComponent implements OnInit {
   }
 
   loadBooks(): void {
-    this.bookService.getBooks().subscribe(data => {
+    this.bookService.books$.subscribe(data => {
       this.books = data;
     });
+
+    this.bookService.getBooks();
   }
 
-  addBook(): void {
-    this.bookService.addBook(this.newBook).subscribe(book => {
-      this.books.push(book);
-      this.resetNewBook();
-    });
-  }
+  // addBook(): void {
+  //   this.bookService.addBook(this.newBook).subscribe(book => {
+  //     this.books.push(book);
+  //     this.resetNewBook();
+  //   });
+  // }
 
   updateBook(book: Book): void {
     this.bookService.updateBook(book).subscribe(updatedBook => {
