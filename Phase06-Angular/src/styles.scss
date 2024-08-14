@@ -76,7 +76,11 @@ body {
 
 button {
   font: var(--var-para);
-  background-color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--var-soft-blue);
+  cursor: pointer;
 }
 
 input,

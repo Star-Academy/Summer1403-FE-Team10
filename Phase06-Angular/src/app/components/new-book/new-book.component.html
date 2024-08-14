@@ -1,4 +1,4 @@
-<!-- <div class="backdrop"></div> -->
+<div class="backdrop"></div>
 <dialog open class="form-container">
   <h1 class="heading">Add Book</h1>
 
@@ -70,7 +70,7 @@
         type="number" />
     </div>
     <div class="form-buttons">
-      <button type="reset" class="form-btn">Cancel</button>
+      <button type="button" class="form-btn" (click)="onCancelBtnClick()">Cancel</button>
       <button type="submit" class="form-btn">Submit</button>
     </div>
   </form>

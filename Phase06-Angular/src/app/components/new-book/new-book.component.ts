@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Book } from '../../models/book';
 import { FormsModule } from '@angular/forms';
 import { BookService } from '../../services/book.service';
+import { ModalStateService } from '../../services/modal-state.service';
 
 @Component({
   selector: 'app-new-book',
@@ -22,7 +23,10 @@ export class NewBookComponent {
   };
   genreString = '';
 
-  constructor(private bookService: BookService) {}
+  constructor(
+    private bookService: BookService,
+    public modalStateService: ModalStateService
+  ) {}
 
   onSubmit() {
     this.newBook.genre = this.genreString.split(', ');
@@ -41,5 +45,10 @@ export class NewBookComponent {
       publishData: '',
       price: 0,
     };
+  }
+
+  onCancelBtnClick() {
+    this.modalStateService.closeAddModal();
+    console.log(this.modalStateService.isAddModalOpen$);
   }
 }
