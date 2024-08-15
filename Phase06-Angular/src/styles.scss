@@ -1,0 +1,98 @@
+@use '../node_modules/@ngxpert/hot-toast/src/styles/styles.scss';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+@import '../src/styles/mixins.scss';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:root {
+  /* Primary */
+  --var-soft-blue: hsl(215, 51%, 70%);
+  --var-cyan: hsl(178, 100%, 50%);
+
+  /* Neutral */
+  --var-main-darkest: hsl(217, 54%, 11%);
+  --var-card-dark: hsl(216, 50%, 16%);
+  --var-line-dark: hsl(215, 32%, 27%);
+  --var-lightest: white;
+
+  /* Fonts */
+  --var-heading: normal normal 600 1.5em/1.6em 'Outfit', sans-serif;
+  --var-small-heading: normal normal 400 1em/1em 'Outfit', sans-serif;
+  --var-para: normal normal 300 1em/1.55em 'Outfit', sans-serif;
+
+  --default-font-size: 15px;
+}
+
+html[data-theme='light'] {
+  --var-soft-blue: hsl(0, 0%, 100%);
+  --var-cyan: hsl(216, 12%, 84%);
+  --var-main-darkest: hsl(213, 94%, 68%);
+  --var-card-dark: hsl(221, 83%, 53%);
+  --var-line-dark: hsl(0, 0%, 85%);
+  --var-lightest: hsl(43, 96%, 56%);
+}
+
+:root {
+  font-size: var(--default-font-size);
+}
+
+h1 {
+  font: var(--var-heading);
+  color: var(--var-lightest);
+}
+
+h2 {
+  font: var(--var-small-heading);
+  color: var(--var-lightest);
+}
+
+p,
+a {
+  font: var(--var-para);
+  color: var(--var-soft-blue);
+}
+
+span {
+  color: white;
+}
+
+body {
+  background-color: var(--var-main-darkest);
+  @include responsive-font(18px);
+}
+
+html[data-theme='light'] body {
+  background-color: #ced6f6;
+}
+
+button {
+  font: var(--var-para);
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--var-soft-blue);
+  cursor: pointer;
+}
+
+html[data-theme='light'] button {
+  --var-line-dark: #313131;
+}
+
+input,
+label {
+  font: var(--var-para);
+}

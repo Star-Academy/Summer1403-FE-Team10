@@ -1,0 +1,86 @@
+@if (book) {
+  <div class="backdrop" (click)="onCancelBtnClick()" aria-hidden="true"></div>
+  <dialog open class="form-container modal-open">
+    <h1 class="heading">Update Book</h1>
+
+    <form class="form" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Book Name</label>
+        <input
+          required
+          placeholder="Enter the book name"
+          name="name"
+          id="name"
+          [(ngModel)]="book.name"
+          type="text"
+          autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL</label>
+        <input
+          required
+          placeholder="Enter the image URL"
+          name="image"
+          id="image"
+          [(ngModel)]="book.image"
+          type="url"
+          autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="genre">Genre</label>
+        <input
+          required
+          placeholder="Enter the genre (comma separated)"
+          name="genre"
+          id="genre"
+          [(ngModel)]="genreString"
+          type="text"
+          autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="author">Author</label>
+        <input
+          required
+          placeholder="Enter the author's name"
+          name="author"
+          id="author"
+          [(ngModel)]="book.author"
+          type="text"
+          autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="publishData">Publish Date</label>
+        <input
+          required
+          placeholder="Enter the publish date"
+          name="publishData"
+          id="publishData"
+          [(ngModel)]="book.publishData"
+          type="date"
+          autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price (in cents)</label>
+        <input
+          required
+          placeholder="Enter the price in dollars"
+          name="price"
+          id="price"
+          [(ngModel)]="book.price"
+          type="number"
+          autocomplete="off" />
+      </div>
+      <div class="form-buttons">
+        <button type="button" class="form-btn" (click)="onCancelBtnClick()">
+          Cancel
+        </button>
+        <button type="submit" class="form-btn">Submit</button>
+      </div>
+    </form>
+  </dialog>
+}
