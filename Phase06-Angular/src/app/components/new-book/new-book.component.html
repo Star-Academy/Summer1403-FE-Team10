@@ -11,7 +11,8 @@
         name="name"
         id="name"
         [(ngModel)]="newBook.name"
-        type="text" />
+        type="text"
+        autocomplete="off" />
     </div>
 
     <div class="form-group">
@@ -22,7 +23,8 @@
         name="image"
         id="image"
         [(ngModel)]="newBook.image"
-        type="url" />
+        type="url"
+        autocomplete="url" />
     </div>
 
     <div class="form-group">
@@ -33,7 +35,8 @@
         name="genre"
         id="genre"
         [(ngModel)]="genreString"
-        type="text" />
+        type="text"
+        autocomplete="off" />
     </div>
 
     <div class="form-group">
@@ -44,7 +47,8 @@
         name="author"
         id="author"
         [(ngModel)]="newBook.author"
-        type="text" />
+        type="text"
+        autocomplete="off" />
     </div>
 
     <div class="form-group">
@@ -55,7 +59,8 @@
         name="publishData"
         id="publishData"
         [(ngModel)]="newBook.publishData"
-        type="date" />
+        type="date"
+        autocomplete="bday" />
     </div>
 
     <div class="form-group">
@@ -66,7 +71,8 @@
         name="price"
         id="price"
         [(ngModel)]="newBook.price"
-        type="number" />
+        type="number"
+        autocomplete="off" />
     </div>
     <div class="form-buttons">
       <button type="button" class="form-btn" (click)="onCancelBtnClick()">
