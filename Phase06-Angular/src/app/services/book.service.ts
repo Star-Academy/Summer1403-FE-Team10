@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { type Book } from '../models/book';
+import { BehaviorSubject, Observable, tap, catchError, throwError } from 'rxjs';
+import { Book } from '../models/book';
+import { HotToastService } from '@ngxpert/hot-toast';
 
 @Injectable({
   providedIn: 'root',
@@ -12,13 +13,25 @@ export class BookService {
   books$ = this.booksSubject.asObservable();
   private maxId = 0;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private toast: HotToastService
+  ) {}
 
   getBooks(): void {
-    this.http.get<Book[]>(this.booksUrl).subscribe(data => {
-      this.booksSubject.next(data);
-      this.maxId = this.calculateMaxId(data);
-    });
+    this.http
+      .get<Book[]>(this.booksUrl)
+      .pipe(
+        tap(data => {
+          this.booksSubject.next(data);
+          this.maxId = this.calculateMaxId(data);
+        }),
+        catchError(() => {
+          this.toast.error('Failed to load books.');
+          return throwError(() => new Error('Failed to fetch books.'));
+        })
+      )
+      .subscribe();
   }
 
   addBook(book: Book): Observable<Book> {
@@ -27,6 +40,11 @@ export class BookService {
       tap(newBook => {
         const currentBooks = this.booksSubject.value;
         this.booksSubject.next([...currentBooks, newBook]);
+        this.toast.success('Book added successfully!');
+      }),
+      catchError(() => {
+        this.toast.error('Failed to add book.');
+        return throwError(() => new Error('Failed to add book.'));
       })
     );
   }
@@ -39,6 +57,11 @@ export class BookService {
           b.id === updatedBook.id ? updatedBook : b
         );
         this.booksSubject.next(updatedBooks);
+        this.toast.success('Book updated successfully!');
+      }),
+      catchError(() => {
+        this.toast.error('Failed to update book.');
+        return throwError(() => new Error('Failed to update book.'));
       })
     );
   }
@@ -49,6 +72,11 @@ export class BookService {
         const currentBooks = this.booksSubject.value;
         const updatedBooks = currentBooks.filter(book => book.id !== id);
         this.booksSubject.next(updatedBooks);
+        this.toast.success('Book deleted successfully!');
+      }),
+      catchError(() => {
+        this.toast.error('Failed to delete book.');
+        return throwError(() => new Error('Failed to delete book.'));
       })
     );
   }

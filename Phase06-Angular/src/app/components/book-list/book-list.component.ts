@@ -32,41 +32,14 @@ export class BookListComponent implements OnInit {
     this.bookService.books$.subscribe(data => {
       this.books = data;
     });
-
     this.bookService.getBooks();
   }
 
-  // addBook(): void {
-  //   this.bookService.addBook(this.newBook).subscribe(book => {
-  //     this.books.push(book);
-  //     this.resetNewBook();
-  //   });
-  // }
-
   updateBook(book: Book): void {
-    this.bookService.updateBook(book).subscribe(updatedBook => {
-      const index = this.books.findIndex(b => b.id === updatedBook.id);
-      if (index !== -1) {
-        this.books[index] = updatedBook;
-      }
-    });
+    this.bookService.updateBook(book).subscribe();
   }
 
   deleteBook(id: number): void {
-    this.bookService.deleteBook(id).subscribe(() => {
-      this.books = this.books.filter(book => book.id !== id);
-    });
-  }
-
-  resetNewBook(): void {
-    this.newBook = {
-      id: 0,
-      name: '',
-      image: '',
-      genre: [],
-      author: '',
-      publishData: '',
-      price: 0,
-    };
+    this.bookService.deleteBook(id).subscribe();
   }
 }

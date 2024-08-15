@@ -30,8 +30,11 @@ export class NewBookComponent {
 
   onSubmit() {
     this.newBook.genre = this.genreString.split(', ');
-    this.bookService.addBook(this.newBook).subscribe(() => {
-      this.resetNewBook();
+    this.bookService.addBook(this.newBook).subscribe({
+      next: () => {
+        this.modalStateService.closeAddModal();
+        this.resetNewBook();
+      },
     });
   }
 
@@ -49,6 +52,5 @@ export class NewBookComponent {
 
   onCancelBtnClick() {
     this.modalStateService.closeAddModal();
-    console.log(this.modalStateService.isAddModalOpen$);
   }
 }
