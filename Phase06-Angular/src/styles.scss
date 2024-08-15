@@ -75,6 +75,10 @@ body {
   @include responsive-font(18px);
 }
 
+html[data-theme='light'] body {
+  background-color: #e8e8e8;
+}
+
 button {
   font: var(--var-para);
   background: none;
@@ -84,7 +88,10 @@ button {
   cursor: pointer;
 }
 
-input,
+html[data-theme='light'] button {
+  --var-line-dark: #313131;
+}
+--var-soft-blue input,
 label {
   font: var(--var-para);
 }
