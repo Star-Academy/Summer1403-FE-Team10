@@ -26,7 +26,7 @@ export class UpdateBookComponent implements OnInit, OnDestroy {
     this.subscription.add(
       this.modalStateService.selectedBook$.subscribe(book => {
         if (book) {
-          this.book = book;
+          this.book = structuredClone(book);
           this.genreString = book.genre.join(', ');
         }
       })
