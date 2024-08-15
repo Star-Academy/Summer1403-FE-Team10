@@ -23,7 +23,6 @@ export class CardComponent {
   ) {}
 
   onUpdate() {
-    console.log(this.book);
     this.modalStateService.openUpdateModal(this.book);
   }
 
