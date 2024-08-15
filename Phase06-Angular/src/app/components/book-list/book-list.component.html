@@ -1,9 +1,5 @@
 <ul class="cards">
   @for (book of books; track book.id) {
-    <app-card
-      [book]="book"
-      class="cards__item"
-      (delete)="deleteBook($event)"
-      (update)="updateBook($event)" />
+    <app-card [book]="book" class="cards__item" />
   }
 </ul>

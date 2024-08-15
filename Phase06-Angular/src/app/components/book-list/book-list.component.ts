@@ -34,12 +34,4 @@ export class BookListComponent implements OnInit {
     });
     this.bookService.getBooks();
   }
-
-  updateBook(book: Book): void {
-    this.bookService.updateBook(book).subscribe();
-  }
-
-  deleteBook(id: number): void {
-    this.bookService.deleteBook(id).subscribe();
-  }
 }

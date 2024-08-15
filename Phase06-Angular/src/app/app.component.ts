@@ -5,6 +5,7 @@ import { BookListComponent } from './components/book-list/book-list.component';
 import { NewBookComponent } from './components/new-book/new-book.component';
 import { ModalStateService } from './services/modal-state.service';
 import { CommonModule } from '@angular/common';
+import { UpdateBookComponent } from './components/update-book/update-book.component';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,7 @@ import { CommonModule } from '@angular/common';
     BookListComponent,
     NewBookComponent,
     CommonModule,
+    UpdateBookComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

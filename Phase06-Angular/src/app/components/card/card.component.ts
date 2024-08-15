@@ -3,6 +3,8 @@ import { RandomNumberPipe } from '../../pipes/random-number.pipe';
 import { DatePipe } from '@angular/common';
 import { ShadowBoxDirective } from '../../directives/shadow-box.directive';
 import { type Book } from '../../models/book';
+import { ModalStateService } from '../../services/modal-state.service';
+import { BookService } from '../../services/book.service';
 
 @Component({
   selector: 'app-card',
@@ -13,14 +15,19 @@ import { type Book } from '../../models/book';
 })
 export class CardComponent {
   @Input() book!: Book;
-  @Output() update = new EventEmitter<Book>();
   @Output() delete = new EventEmitter<number>();
 
+  constructor(
+    public modalStateService: ModalStateService,
+    public bookService: BookService
+  ) {}
+
   onUpdate() {
-    this.update.emit(this.book);
+    console.log(this.book);
+    this.modalStateService.openUpdateModal(this.book);
   }
 
   onDelete() {
-    this.delete.emit(this.book.id);
+    this.bookService.deleteBook(this.book.id).subscribe();
   }
 }
