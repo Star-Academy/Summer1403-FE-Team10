@@ -1,0 +1,4 @@
+body {
+  background-color: var(--var-main-darkest);
+  @include responsive-font(18px);
+}

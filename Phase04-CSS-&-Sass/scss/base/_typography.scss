@@ -1,0 +1,22 @@
+:root {
+  font-size: var(--default-font-size);
+}
+
+h1 {
+  font: var(--var-heading);
+  color: var(--var-lightest);
+}
+
+h2 {
+  font: var(--var-small-heading);
+  color: var(--var-lightest);
+}
+
+p {
+  font: var(--var-para);
+  color: var(--var-soft-blue);
+}
+
+span {
+  color: white;
+}
