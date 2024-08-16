@@ -1,0 +1,10 @@
+<app-header />
+<main class="main">
+  <app-new-book
+    *ngIf="modalStateService.isAddModalOpen$ | async"></app-new-book>
+  <app-update-book
+    *ngIf="modalStateService.isUpdateModalOpen$ | async"></app-update-book>
+  <app-book-list />
+</main>
+
+<router-outlet />

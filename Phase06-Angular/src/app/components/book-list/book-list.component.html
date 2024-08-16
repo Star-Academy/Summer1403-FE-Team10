@@ -1,0 +1,5 @@
+<ul class="cards">
+  @for (book of books; track book.id) {
+    <app-card [book]="book" class="cards__item" />
+  }
+</ul>

@@ -1,0 +1,27 @@
+.container {
+  height: 4rem;
+  background-color: var(--var-card-dark);
+  margin-bottom: 1.5rem;
+  padding: 0 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.link {
+  margin: 1rem;
+}
+
+.logo {
+  height: 2rem;
+}
+
+.containerLogo {
+  display: flex;
+  gap: 1rem;
+}
